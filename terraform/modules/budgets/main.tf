@@ -9,6 +9,7 @@ resource "aws_budgets_budget" "monthly_budget" {
     comparison_operator = "GREATER_THAN"
     notification_type   = "FORECASTED"
     threshold           = 90
+    threshold_type      = "PERCENTAGE" # Add this line
 
     subscriber {
       subscription_type = "EMAIL"
