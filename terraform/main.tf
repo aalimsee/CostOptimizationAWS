@@ -10,6 +10,12 @@ module "s3_bucket" {
   source = "./modules/s3"
 }
 
+module "s3" {
+  source = "./modules/s3"
+  bucket_name = var.bucket_name
+  versioning  = true
+}
+
 module "cost_budget" {
   source = "./modules/budgets"
   budget_name = "MonthlyCostBudget"
