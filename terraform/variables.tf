@@ -19,5 +19,5 @@ variable "budget_limit" {
 }
 
 variable "notification_email" {
-  default     = "example@example.com"
+  default     = "aaron.limse@hotmail.com"
 }
