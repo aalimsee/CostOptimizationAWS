@@ -9,3 +9,7 @@ resource "aws_s3_bucket" "reports" {
     Name = "CostOptimizationReports"
   }
 }
+
+output "bucket_name" {
+  value = aws_s3_bucket.reports.bucket
+}
