@@ -1,23 +1,21 @@
 provider "aws" {
-  region = var.region
+  region = "us-east-1"
 }
 
-module "ec2_instance" {
+module "ec2" {
   source = "./modules/ec2"
-}
-
-module "s3_bucket" {
-  source = "./modules/s3"
+  instance_type = "t2.micro"
 }
 
 module "s3" {
   source = "./modules/s3"
-  bucket_name = var.bucket_name
-  versioning  = true
+  bucket_name = "cost-reports-bucket"
+  versioning = true
 }
 
-module "cost_budget" {
+module "budgets" {
   source = "./modules/budgets"
-  budget_name = "MonthlyCostBudget"
-  limit       = var.budget_limit
+  budget_name = "monthly-budget"
+  budget_limit = 100
+  notification_email = "aaron.limse@hotmail.com"
 }
