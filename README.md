@@ -1,2 +1,1 @@
 # CostOptimizationAWS
-# CostOptimizationAWS
