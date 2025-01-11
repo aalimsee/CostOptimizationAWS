@@ -12,8 +12,8 @@ module "ec2" {
 # S3 Bucket for Reports
 module "s3" {
   source         = "./modules/s3"
-  bucket_name    = var.s3_bucket_name
-  versioning     = true
+#  bucket_name    = var.s3_bucket_name
+#  versioning     = true
 }
 
 # AWS Budgets
