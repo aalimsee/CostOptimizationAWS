@@ -1,9 +1,9 @@
 variable "instance_type" {
-  default     = "t3.micro"
+  default     = "t2.micro"
 }
 
 variable "ami_id" {
-  default     = "ami-0c02fb55956c7d316"
+  default     = "ami-05576a079321f21f8"
 }
 
 variable "s3_bucket_name" {
