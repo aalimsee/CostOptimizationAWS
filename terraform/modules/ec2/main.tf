@@ -13,3 +13,7 @@ sudo yum update -y
 sudo yum install -y stress fio python3
 EOF
 }
+
+output "instance_id" {
+  value = aws_instance.example.id
+}
