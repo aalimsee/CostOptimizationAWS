@@ -18,7 +18,7 @@ resource "aws_budgets_budget" "monthly_budget" {
   }
 }
 
-resource "aws_budgets_budget" "monthly_budget" {
+resource "aws_budgets_budget" "example" {
   name          = var.budget_name
   budget_type   = "COST"
   limit_amount  = var.budget_limit
